@@ -1,2 +1,2 @@
-# svs-talent
-Seavus Java Talent Program
+# Seavus - Java Talent Program
+
