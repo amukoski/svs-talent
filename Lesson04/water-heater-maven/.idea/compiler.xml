@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="acme-thermoregulator" />
+        <module name="acme-vento-heater-adapter" />
+        <module name="acme-vento-thermometer-adapter" />
+        <module name="application" />
+        <module name="vento-acme-thermoregulator-adapter" />
+        <module name="vento-heater" />
+        <module name="vento-powereddevice" />
+        <module name="vento-powerswitch" />
+        <module name="vento-thermometer" />
+        <module name="vento-thermoregulator" />
+        <module name="vento-waterheater" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="acme-thermoregulator" target="1.8" />
+      <module name="acme-vento-heater-adapter" target="1.8" />
+      <module name="acme-vento-thermometer-adapter" target="1.8" />
+      <module name="application" target="1.8" />
+      <module name="vento-acme-thermoregulator-adapter" target="1.8" />
+      <module name="vento-heater" target="1.8" />
+      <module name="vento-powereddevice" target="1.8" />
+      <module name="vento-powerswitch" target="1.8" />
+      <module name="vento-thermometer" target="1.8" />
+      <module name="vento-thermoregulator" target="1.8" />
+      <module name="vento-waterheater" target="1.8" />
+      <module name="water-heater-maven" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/acme-thermoregulator/acme-thermoregulator.iml" filepath="$PROJECT_DIR$/acme-thermoregulator/acme-thermoregulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acme-vento-heater-adapter/acme-vento-heater-adapter.iml" filepath="$PROJECT_DIR$/acme-vento-heater-adapter/acme-vento-heater-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acme-vento-thermometer-adapter/acme-vento-thermometer-adapter.iml" filepath="$PROJECT_DIR$/acme-vento-thermometer-adapter/acme-vento-thermometer-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-acme-thermoregulator-adapter/vento-acme-thermoregulator-adapter.iml" filepath="$PROJECT_DIR$/vento-acme-thermoregulator-adapter/vento-acme-thermoregulator-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-heater/vento-heater.iml" filepath="$PROJECT_DIR$/vento-heater/vento-heater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-powereddevice/vento-powereddevice.iml" filepath="$PROJECT_DIR$/vento-powereddevice/vento-powereddevice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-powerswitch/vento-powerswitch.iml" filepath="$PROJECT_DIR$/vento-powerswitch/vento-powerswitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-thermometer/vento-thermometer.iml" filepath="$PROJECT_DIR$/vento-thermometer/vento-thermometer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-thermoregulator/vento-thermoregulator.iml" filepath="$PROJECT_DIR$/vento-thermoregulator/vento-thermoregulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vento-waterheater/vento-waterheater.iml" filepath="$PROJECT_DIR$/vento-waterheater/vento-waterheater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/water-heater-maven.iml" filepath="$PROJECT_DIR$/water-heater-maven.iml" />
+    </modules>
+  </component>
+</project>

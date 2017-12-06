@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="acme-vento-heater-adapter" />
+    <orderEntry type="module" module-name="vento-heater" />
+    <orderEntry type="module" module-name="vento-powereddevice" />
+    <orderEntry type="module" module-name="acme-thermoregulator" />
+    <orderEntry type="module" module-name="acme-vento-thermometer-adapter" />
+    <orderEntry type="module" module-name="vento-thermometer" />
+    <orderEntry type="module" module-name="vento-acme-thermoregulator-adapter" />
+    <orderEntry type="module" module-name="vento-thermoregulator" />
+    <orderEntry type="module" module-name="vento-waterheater" />
+    <orderEntry type="module" module-name="vento-powerswitch" />
+  </component>
+</module>
