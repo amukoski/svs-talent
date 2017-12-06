@@ -1,4 +1,4 @@
-package com.acme.heater;
+package com.acme.thermoregulator;
 
 public interface HeaterDevice {
     void startHeating();

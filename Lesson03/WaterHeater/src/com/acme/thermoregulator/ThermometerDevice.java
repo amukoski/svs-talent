@@ -1,4 +1,4 @@
-package com.acme.thermometer;
+package com.acme.thermoregulator;
 
 public interface ThermometerDevice {
     Integer getTemperature();

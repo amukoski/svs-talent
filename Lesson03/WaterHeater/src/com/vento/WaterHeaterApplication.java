@@ -1,14 +1,13 @@
 package com.vento;
 
-import com.acme.adapters.AcmeThermoregulatorAdapter;
-import com.acme.adapters.VentoHeaterAdapter;
-import com.acme.adapters.VentoThermometerAdapter;
+import com.acme.adapters.AcmeVentoHeaterAdapter;
+import com.acme.adapters.AcmeVentoThermometerAdapter;
+import com.acme.adapters.VentoAcmeThermoregulatorAdapter;
 import com.acme.thermoregulator.EfficientThermoregulator;
-import com.acme.thermoregulator.StandardThermoregulator;
-import com.vento.powereddevice.heater.Heater;
-import com.vento.powereddevice.thermometer.Thermometer;
-import com.vento.powereddevice.thermoregulator.Thermoregulator;
-import com.vento.powereddevice.PowerSwitch;
+import com.vento.heater.Heater;
+import com.vento.thermometer.Thermometer;
+import com.vento.thermoregulator.Thermoregulator;
+import com.vento.powerswitch.PowerSwitch;
 import com.vento.waterheater.WaterHeater;
 
 import java.util.concurrent.TimeUnit;
@@ -21,16 +20,16 @@ public class WaterHeaterApplication {
         Thermometer thermometer = new Thermometer();
 
 //        // Standard
-//        Thermoregulator thermoregulator = new AcmeThermoregulatorAdapter(
+//        Thermoregulator thermoregulator = new VentoAcmeThermoregulatorAdapter(
 //            new StandardThermoregulator(
-//                    new VentoHeaterAdapter(heater),
-//                    new VentoThermometerAdapter(thermometer)));
+//                    new AcmeVentoHeaterAdapter(heater),
+//                    new AcmeVentoThermometerAdapter(thermometer)));
 
         // Efficient
-        Thermoregulator thermoregulator = new AcmeThermoregulatorAdapter(
+        Thermoregulator thermoregulator = new VentoAcmeThermoregulatorAdapter(
                 new EfficientThermoregulator(
-                        new VentoHeaterAdapter(heater),
-                        new VentoThermometerAdapter(thermometer)));
+                        new AcmeVentoHeaterAdapter(heater),
+                        new AcmeVentoThermometerAdapter(thermometer)));
 
         WaterHeater waterHeater = new WaterHeater(powerSwitch, heater, thermometer, thermoregulator);
 

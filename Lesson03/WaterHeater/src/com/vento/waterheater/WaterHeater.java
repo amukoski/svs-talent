@@ -1,9 +1,9 @@
 package com.vento.waterheater;
 
-import com.vento.powereddevice.PowerSwitch;
-import com.vento.powereddevice.heater.Heater;
-import com.vento.powereddevice.thermometer.Thermometer;
-import com.vento.powereddevice.thermoregulator.Thermoregulator;
+import com.vento.powerswitch.PowerSwitch;
+import com.vento.heater.Heater;
+import com.vento.thermometer.Thermometer;
+import com.vento.thermoregulator.Thermoregulator;
 
 public class WaterHeater {
 

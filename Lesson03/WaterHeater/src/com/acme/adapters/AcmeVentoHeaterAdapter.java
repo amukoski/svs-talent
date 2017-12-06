@@ -1,13 +1,13 @@
 package com.acme.adapters;
 
-import com.acme.heater.HeaterDevice;
-import com.vento.powereddevice.heater.Heater;
+import com.acme.thermoregulator.HeaterDevice;
+import com.vento.heater.Heater;
 
-public class VentoHeaterAdapter implements HeaterDevice {
+public class AcmeVentoHeaterAdapter implements HeaterDevice {
 
     private Heater heater;
 
-    public VentoHeaterAdapter(Heater heater) {
+    public AcmeVentoHeaterAdapter(Heater heater) {
         this.heater = heater;
     }
 

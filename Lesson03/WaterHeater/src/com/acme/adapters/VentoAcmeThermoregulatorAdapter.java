@@ -1,13 +1,13 @@
 package com.acme.adapters;
 
 import com.acme.thermoregulator.ThermoregulatorDevice;
-import com.vento.powereddevice.thermoregulator.Thermoregulator;
+import com.vento.thermoregulator.Thermoregulator;
 
-public class AcmeThermoregulatorAdapter implements Thermoregulator {
+public class VentoAcmeThermoregulatorAdapter implements Thermoregulator {
 
     private ThermoregulatorDevice thermoregulator;
 
-    public AcmeThermoregulatorAdapter(ThermoregulatorDevice thermoregulator) {
+    public VentoAcmeThermoregulatorAdapter(ThermoregulatorDevice thermoregulator) {
         this.thermoregulator = thermoregulator;
     }
 

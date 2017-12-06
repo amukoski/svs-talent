@@ -1,4 +1,4 @@
-package com.vento.exception;
+package com.vento.powereddevice.exception;
 
 public class NoPowerException extends RuntimeException {
 

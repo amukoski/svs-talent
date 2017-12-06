@@ -1,6 +1,6 @@
-package com.vento.powereddevice.thermometer;
+package com.vento.thermometer;
 
-import com.vento.exception.NoPowerException;
+import com.vento.powereddevice.exception.NoPowerException;
 import com.vento.powereddevice.PoweredDevice;
 
 import java.util.Random;

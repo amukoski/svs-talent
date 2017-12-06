@@ -1,4 +1,4 @@
-package com.vento.powereddevice.thermoregulator;
+package com.vento.thermoregulator;
 
 import com.vento.powereddevice.PoweredDevice;
 

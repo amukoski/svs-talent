@@ -1,6 +1,6 @@
-package com.vento.powereddevice.heater;
+package com.vento.heater;
 
-import com.vento.exception.NoPowerException;
+import com.vento.powereddevice.exception.NoPowerException;
 import com.vento.powereddevice.PoweredDevice;
 
 public class Heater implements PoweredDevice {

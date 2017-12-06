@@ -1,4 +1,4 @@
-package com.vento.powereddevice;
+package com.vento.powerswitch;
 
 import com.vento.powereddevice.PoweredDevice;
 
