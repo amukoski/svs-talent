@@ -1,0 +1,11 @@
+<div class="row card">
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center followers-heading-color">
+      Followers
+      <span class="badge badge-success badge-pill">{{followers.length}}</span>
+    </li>
+    <li *ngFor="let follower of followers" class="list-group-item d-flex justify-content-between align-items-center">
+      {{follower.email}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <div class="list-group-item flex-column">
+    <li class="media d-flex w-100 justify-content-between">
+      <img class="d-flex mr-3" src="/assets/img/avatar-{{(tweet.twitter.id % 7) + 1}}.png" alt="placeholder image">
+      <div class="media-body">
+        <div class="md-form d-flex w-100 justify-content-between">
+          <textarea mdbActive type="text" [(ngModel)]="tweet.text" id="form7" class="md-textarea"></textarea>
+          <label for="form7">What's happening?</label>
+        </div>
+        <button type="button" [disabled]="!(tweet && tweet.text)" (click)="postTweet()" class="float-right mb-1 btn btn-md btn-primary" mdbRippleRadius>
+                    Tweet <i class="fa fa-twitter ml-1"></i>
+        </button>
+      </div>
+    </li>
+  </div>
+</ul>

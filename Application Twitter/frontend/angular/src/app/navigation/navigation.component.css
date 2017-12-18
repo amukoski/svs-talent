@@ -1,0 +1,38 @@
+.active {
+  background-color: rgba(51, 212, 240, 0.2) !important;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar-toggler {
+  background-color: rgba(51, 204, 255, 0.7);
+}
+
+.navbar-nav li a {
+  color: #212121 !important;
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.top-nav-collapse {
+  background-color: rgba(157, 236, 249, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgba(157, 236, 249, 0.5);
+  }
+}
+
+logo a img {
+  vertical-align: text-top !important;
+}

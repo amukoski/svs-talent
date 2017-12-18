@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Twitter {
@@ -13,11 +14,13 @@ public class Twitter {
     @GeneratedValue
     private Long id;
 
+    private String name;
+
     @Column(nullable = false, unique = true)
     private String email;
 
     @JsonIgnore
-    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "twitter")
     private List<Tweet> tweets;
 
     @JsonIgnore
@@ -31,8 +34,21 @@ public class Twitter {
     public Twitter() {
     }
 
+    public Twitter(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
     public Twitter(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(Long id) {
@@ -67,6 +83,7 @@ public class Twitter {
     public String toString() {
         return "Twitter{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

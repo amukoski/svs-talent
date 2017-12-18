@@ -1,0 +1,10 @@
+img {
+  width: 64px;
+  height: 64px;
+  margin-top: 25px;
+}
+
+button:disabled {
+  color: black !important;
+  background-color: #f4f4f4;
+}

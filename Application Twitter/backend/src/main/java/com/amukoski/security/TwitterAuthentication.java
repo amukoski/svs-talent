@@ -23,6 +23,7 @@ public class TwitterAuthentication implements Authenticator {
 
         Twitter twitter = new Twitter();
         twitter.setId(authenticatedTwitter.getId());
+        twitter.setName(authenticatedTwitter.getName());
         twitter.setEmail(authenticatedTwitter.getEmail());
 
         authenticatedTwitter = null;

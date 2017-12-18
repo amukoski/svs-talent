@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)  // angular-cli
 @RestController
 public class LoginController {
 
@@ -28,7 +29,8 @@ public class LoginController {
     @PostMapping("/sign-in")
     public ResponseEntity signIn(@RequestBody Twitter twitter) {
         String email = twitter.getEmail();
-        return authenticator.login(twitterService.findTwitter(email)) ? ResponseEntity.ok().build()
+        twitter = twitterService.findTwitter(email);
+        return authenticator.login(twitter) ? ResponseEntity.ok(twitter)
                 : ResponseEntity.notFound().build();
     }
 

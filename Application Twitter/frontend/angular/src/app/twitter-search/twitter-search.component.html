@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <input class="form-control w-100" type="text" (input)="searchEmail($event.target.value)" placeholder="Search for twitter" aria-label="Search" mdbActive>
+  </li>
+  <li *ngFor="let twitter of twitters" class="list-group-item d-flex justify-content-between align-items-center">
+    {{twitter.email}}
+    <button type="button" [disabled]="checkTwitterId(twitter.id)" (click)="follow(twitter.id)" class="btn btn-sm btn-info" mdbRippleRadius>follow</button>
+  </li>
+</ul>

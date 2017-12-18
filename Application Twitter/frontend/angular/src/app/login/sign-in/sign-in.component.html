@@ -1,0 +1,45 @@
+<section class="row justify-content-center form-light">
+
+  <!--Form without header-->
+  <div class="card col-md-8 col-lg-5 col-sm-8">
+
+    <div class="card-body mx-4">
+      <!--Header-->
+      <div class="text-center">
+        <h3 class="blue-text mb-5"><strong>Sign In</strong></h3>
+      </div>
+
+      <div *ngIf="loading" class="text-center mx-4">
+        <img src="/assets/img/load-spinner.gif" class="img-responsive" alt="spinner">
+      </div>
+
+      <div *ngIf="!loading">
+        <!--Body-->
+        <div class="md-form">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="text" [(ngModel)]="twitter.email"  id="Form-email3" class="form-control" mdbActive>
+          <label for="Form-email3">Your email</label>
+        </div>
+
+        <!--Grid row-->
+        <div class="row d-flex align-items-center mb-4">
+
+          <!--Grid column-->
+          <div class="col-md-12 text-center">
+            <button type="button" [disabled]="!twitter.email" (click)="signIn()"  class="btn btn-blue btn-block btn-rounded z-depth-1" mdbRippleRadius>Sign In</button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+      </div>
+    </div>
+    <!--Footer-->
+    <div *ngIf="!loading" class="modal-footer mx-5 pt-3 mb-1">
+      <p class="font-small grey-text d-flex justify-content-end">Not a member? <a routerLink="/login/sign-up" class="pink-text ml-1"> Sign Up</a></p>
+    </div>
+
+  </div>
+  <!--/Form without header-->
+
+</section>

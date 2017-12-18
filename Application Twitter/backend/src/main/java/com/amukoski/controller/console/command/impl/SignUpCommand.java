@@ -34,9 +34,10 @@ public class SignUpCommand implements Command {
 
     @Override
     public void execute() {
+        String name = inputReader.readFromInput("Twitter[name]:");
         String email = inputReader.readFromInput("Twitter[email]:");
 
-        Twitter twitter = twitterService.createTwitter(new Twitter(email));
+        Twitter twitter = twitterService.createTwitter(new Twitter(name, email));
         System.out.println("**" + twitter + " successfully created.");
 
         if (authenticator.login(twitterService.findTwitter(email))) {

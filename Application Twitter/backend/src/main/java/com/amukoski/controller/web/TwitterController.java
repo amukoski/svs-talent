@@ -1,5 +1,6 @@
 package com.amukoski.controller.web;
 
+import com.amukoski.model.Tweet;
 import com.amukoski.model.Twitter;
 import com.amukoski.service.TwitterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)  // angular-cli
 @RestController
 @RequestMapping("/twitters")
 public class TwitterController {
@@ -32,6 +34,30 @@ public class TwitterController {
     @GetMapping("/email/{email}")
     public Twitter getTwitterByEmail(@PathVariable("email") String email) {
         return twitterService.findTwitter(email);
+    }
+
+    // Authenticated
+    @GetMapping("/{id}/tweets")
+    public List<Tweet> getTwitterTweets(@PathVariable("id") Long id) {
+        return twitterService.findAllTwittersTweets(id);
+    }
+
+    // Authenticated
+    @GetMapping("/email-search/{email}")
+    public List<Twitter> getAllTwittersByEmailLike(@PathVariable("email") String email) {
+        return twitterService.findAllTwittersWithEmailsLike(email);
+    }
+
+    // Authenticated
+    @GetMapping("/followers")
+    public List<Twitter> getAllFollowers() {
+        return twitterService.followers();
+    }
+
+    // Authenticated
+    @GetMapping("/followings")
+    public List<Twitter> getAllTwitterIFollow() {
+        return twitterService.followings();
     }
 
     @PostMapping

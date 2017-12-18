@@ -1,5 +1,6 @@
 package com.amukoski.service.impl;
 
+import com.amukoski.model.Tweet;
 import com.amukoski.model.Twitter;
 import com.amukoski.repository.TwitterRepository;
 import com.amukoski.security.Authenticator;
@@ -7,7 +8,9 @@ import com.amukoski.service.TwitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class TwitterServiceImpl implements TwitterService {
@@ -49,6 +52,7 @@ public class TwitterServiceImpl implements TwitterService {
         }
 
         exist.setEmail(twitter.getEmail());
+        exist.setName(twitter.getName());
         return twitterRepository.save(exist);
     }
 
@@ -64,6 +68,15 @@ public class TwitterServiceImpl implements TwitterService {
 
     // Authenticated
     @Override
+    public List<Twitter> findAllTwittersWithEmailsLike(String email) {
+        Twitter authenticatedTwitter = authenticator.getAuthenticatedTwitter();
+        List<Twitter> byEmailContaining = twitterRepository.findByEmailContaining(email);
+        byEmailContaining.remove(authenticatedTwitter);
+        return byEmailContaining;
+    }
+
+    // Authenticated
+    @Override
     public Twitter follow(Long toFollowId) {
         Twitter authenticatedTwitter = authenticator.getAuthenticatedTwitter();
         Long authenticatedTwitterId = authenticatedTwitter.getId();
@@ -71,12 +84,37 @@ public class TwitterServiceImpl implements TwitterService {
             throw new IllegalArgumentException("You cannot follow you");
         }
 
+        Twitter first = twitterRepository.findOne(authenticatedTwitterId);
         Twitter second = twitterRepository.findOne(toFollowId);
-        if (second == null) {
+        if (second == null || first == null) {
             return null;
         }
 
-        authenticatedTwitter.getFollowing().add(second);
-        return twitterRepository.save(authenticatedTwitter);
+        if (!first.getFollowing().contains(second)) {
+            first.getFollowing().add(second);
+        }
+
+        authenticator.login(twitterRepository.save(first));
+        return first;
+    }
+
+    // Authenticated
+    @Override
+    public List<Twitter> followers() {
+        Twitter authenticatedTwitter = authenticator.getAuthenticatedTwitter();
+        return authenticatedTwitter.getFollowers();
+    }
+
+    // Authenticated
+    @Override
+    public List<Twitter> followings() {
+        Twitter authenticatedTwitter = authenticator.getAuthenticatedTwitter();
+        return authenticatedTwitter.getFollowing();
+    }
+
+    @Override
+    public List<Tweet> findAllTwittersTweets(Long id) {
+        Twitter twitter = findTwitter(id);
+        return twitter.getTweets();
     }
 }

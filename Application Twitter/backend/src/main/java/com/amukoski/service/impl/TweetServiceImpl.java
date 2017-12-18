@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -36,7 +37,7 @@ public class TweetServiceImpl implements TweetService {
     @Override
     public List<Tweet> listAllTweetsFromFollowingTwitters(Sort sort) {
         Twitter authenticatedTwitter = authenticator.getAuthenticatedTwitter();
-        List<Twitter> twitters = authenticatedTwitter.getFollowing();
+        List<Twitter> twitters = new ArrayList<>(authenticatedTwitter.getFollowing());
         twitters.add(authenticatedTwitter);
 
         return tweetRepository.findAllByTwitterIn(twitters, sort);

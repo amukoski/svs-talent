@@ -1,0 +1,34 @@
+<header>
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar" [containerInside]="false">
+    <logo>
+      <a class="logo navbar-brand" routerLink="/">
+              <img src="http://pngimg.com/uploads/twitter/twitter_PNG4.png" height="20" alt="">
+          </a>
+    </logo>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item hm-white-slight" mdbRippleRadius>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">
+            <i class="fa fa-home prefix"></i> Home <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav" *ngIf="!auth.isAuthenticated()">
+        <li class="nav-item hm-white-slight" mdbRippleRadius>
+          <a class="nav-link" routerLink="/login/sign-in" routerLinkActive="active">Sign In</a>
+        </li>
+        <li class="nav-item hm-white-slight" mdbRippleRadius>
+          <a class="nav-link" routerLink="/login/sign-up" routerLinkActive="active">Sign Up</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav" *ngIf="auth.isAuthenticated()">
+        <li class="nav-item hm-white-slight" mdbRippleRadius>
+          <a class="nav-link" (click)="signOut()">Sign Out</a>
+        </li>
+      </ul>
+
+    </links>
+  </mdb-navbar>
+</header>

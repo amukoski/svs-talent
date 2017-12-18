@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <a class="list-group-item list-group-item-action flex-column text-center" (click)="refresh()">
+    <span *ngIf="!loading">Refresh</span>
+    <img *ngIf="loading" src="/assets/img/load-spinner.gif" class="img-responsive" alt="spinner">
+  </a>
+
+  <div class="list-group-item flex-column" *ngFor="let tweet of tweets">
+    <li class="media d-flex w-100 justify-content-between">
+      <img class="d-flex mr-3" src="/assets/img/avatar-{{(tweet.twitter.id % 7) + 1}}.png" alt="placeholder image">
+      <div class="media-body">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{tweet.twitter.name}} [{{tweet.twitter.email}}]</h5>
+          <small class="text-muted">{{ parseDate(tweet.time) }}</small>
+        </div>
+        <p class="mb-1">{{tweet.text}}</p>
+      </div>
+    </li>
+  </div>
+</ul>

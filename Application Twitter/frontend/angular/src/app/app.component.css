@@ -1,0 +1,5 @@
+.bg-image {
+  background: url("https://pinktwinkies.files.wordpress.com/2012/12/abstract-bubbles-ppt-backgrounds-powerpoint1.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100% !important;
+}
