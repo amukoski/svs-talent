@@ -36,21 +36,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="461">
-                <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -192,20 +178,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application Twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application Twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -222,12 +194,13 @@
     <property name="SearchEverywhereHistoryKey" value="Twitter&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/model/Twitter.java&#10;TweetSer&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/impl/TweetServiceImpl.java&#10;Twitterser&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/impl/TwitterServiceImpl.java&#10;TweeSer&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/impl/TweetServiceImpl.java&#10;applica&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/resources/application.properties&#10;Tweet&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/model/Tweet.java&#10;Authenticator&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/security/Authenticator.java&#10;login&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/controller/web/LoginController.java&#10;TwitterService&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/impl/TwitterServiceImpl.java&#10;TwitterCon&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/controller/web/TwitterController.java&#10;TweetRe&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/repository/TweetRepository.java&#10;Repositor&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/repository/TwitterRepository.java&#10;TweetSe&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/impl/TweetServiceImpl.java&#10;TwitterSe&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/service/TwitterService.java&#10;TwitterC&#9;FILE&#9;file://C:/Users/amukoski/Desktop/Application Twitter/backend/src/main/java/com/amukoski/controller/console/TwitterController.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\amukoski\Desktop\Application Twitter\angular" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\amukoski\Desktop\Application Twitter\frontend" />
       <recent name="C:\Users\amukoski\Desktop\Application Twitter\frontend\angular" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amukoski\Desktop\svs-talent\Application Twitter\frontend" />
+      <recent name="C:\Users\amukoski\Desktop\Application Twitter\angular" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -725,16 +698,15 @@
       <updated>1513205887797</updated>
       <workItem from="1513205891507" duration="31800000" />
       <workItem from="1513551654637" duration="26478000" />
-      <workItem from="1513681668215" duration="3287000" />
+      <workItem from="1513681668215" duration="4630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61565000" />
+    <option name="totallyTimeSpent" value="62908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -751,7 +723,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63011456" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1124,8 +1096,8 @@
     <entry file="file://$PROJECT_DIR$/frontend/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="461">
-            <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             <folding />
           </first_editor>
           <second_editor />
