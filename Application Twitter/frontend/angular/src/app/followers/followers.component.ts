@@ -22,7 +22,6 @@ export class FollowersComponent implements OnInit {
   loadTwitters() {
     this.twitterService.getTwitterFollowers()
       .subscribe(data => {
-        console.log('Success', data);
         this.followers = data;
       }, error => {
         console.log('Error', error);

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Twitter } from '../shared/model/Twitter';
 import { TwitterService } from '../shared/service/twitter.service';
@@ -9,6 +9,8 @@ import { TwitterService } from '../shared/service/twitter.service';
   styleUrls: ['./twitter-search.component.scss']
 })
 export class TwitterSearchComponent implements OnInit {
+
+  @Output() followtwitter = new EventEmitter();
 
   twitters: Array<Twitter>;
   following: Array<Twitter>;
@@ -30,7 +32,6 @@ export class TwitterSearchComponent implements OnInit {
   loadTwitters() {
     this.twitterService.getTwitters()
       .subscribe(data => {
-        console.log('Success', data);
         this.twitters = this.twittersState = data;
 
         let myId = JSON.parse(localStorage.getItem("twitter")).id;
@@ -38,17 +39,16 @@ export class TwitterSearchComponent implements OnInit {
 
         this.twitters.splice(index, 1);
       }, error => {
-        console.log('Error', error);
+        // Handle here
       });
   }
 
   loadFollowings() {
     this.twitterService.getTwitterFollowing()
       .subscribe(data => {
-        console.log('Success', data);
         this.following = data;
       }, error => {
-        console.log('Error', error);
+        // Handle here
       });
   }
 
@@ -59,10 +59,10 @@ export class TwitterSearchComponent implements OnInit {
   follow(twitterId) {
     this.twitterService.followOtherTwitter(twitterId)
       .subscribe(data => {
-        console.log('Success', data);
+        this.followtwitter.emit(null);
         this.loadFollowings();
       }, error => {
-        console.log('Error', error);
+        // Handle here
       });
   }
 

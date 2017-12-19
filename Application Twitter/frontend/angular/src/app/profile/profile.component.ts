@@ -26,10 +26,9 @@ export class ProfileComponent implements OnInit {
     let id = JSON.parse(localStorage.getItem("twitter")).id;
     this.twitterService.getTwitterTweets(id)
       .subscribe(data => {
-        console.log('Success tweets', data);
         this.tweets = data.length;
       }, error => {
-        console.log('Error', error);
+        // Handle here
       });
   }
 }

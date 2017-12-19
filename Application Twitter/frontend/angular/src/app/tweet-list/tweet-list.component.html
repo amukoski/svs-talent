@@ -1,19 +1,30 @@
-<ul class="list-group">
-  <a class="list-group-item list-group-item-action flex-column text-center" (click)="refresh()">
+<ul class="list-group card card-cascade">
+  <a class="list-group-item list-group-item-action flex-column text-center card-title" (click)="refresh()">
     <span *ngIf="!loading">Refresh</span>
     <img *ngIf="loading" src="/assets/img/load-spinner.gif" class="img-responsive" alt="spinner">
   </a>
 
-  <div class="list-group-item flex-column" *ngFor="let tweet of tweets">
-    <li class="media d-flex w-100 justify-content-between">
+  <div class="list-group-item card card-cascade" *ngFor="let tweet of tweets">
+    <div class="text-right">
+      <small class="text-muted">{{ parseDate(tweet.time) }}</small>
+    </div>
+    <li class="media text-left">
       <img class="d-flex mr-3" src="/assets/img/avatar-{{(tweet.twitter.id % 7) + 1}}.png" alt="placeholder image">
-      <div class="media-body">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">{{tweet.twitter.name}} [{{tweet.twitter.email}}]</h5>
-          <small class="text-muted">{{ parseDate(tweet.time) }}</small>
+
+      <div class="w-100">
+        <div class="card-title">
+          <div class="card-text">
+            <div>
+              <strong>{{tweet.twitter.name}}</strong>
+            </div>
+            <i>{{tweet.twitter.email}}</i>
+          </div>
         </div>
-        <p class="mb-1">{{tweet.text}}</p>
+        <div class="card-text">
+          {{tweet.text}}
+        </div>
       </div>
+
     </li>
   </div>
 </ul>

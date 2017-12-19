@@ -43,7 +43,9 @@ export class SignInComponent implements OnInit {
         }, 1000);
       }, error => {
         setTimeout(() => {
-          this.toastr.error('Invalid email or server error!', 'Error!');
+          console.log(error);
+          let msg = error.status === 404 ? "Twitter with this email does not exists" : "Server Error: Check your internet connection";
+          this.toastr.error(msg, 'Error!');
           this.loading = !this.loading;
         }, 600);
       });

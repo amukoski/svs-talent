@@ -24,8 +24,6 @@ export class NavigationComponent implements OnInit {
     console.log('Signing out..');
     this.loginService.signOut()
       .subscribe(data => {
-        console.log('Success', data);
-
         this.auth.setAuthenticated(false);
         localStorage.removeItem("twitter");
 

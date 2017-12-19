@@ -4,20 +4,23 @@
 
       <div class="col-md-3">
         <div class="container-fluid">
-          <app-profile></app-profile>
+          <app-profile #profile></app-profile>
           <br/>
           <app-followers></app-followers>
+          <br/>
         </div>
       </div>
 
       <div class="col-md-6">
-        <app-tweet-post></app-tweet-post>
+        <app-tweet-post (tweetcreated)="profile.countTweets();tweetlist.refresh()"></app-tweet-post>
         <br/>
-        <app-tweet-list></app-tweet-list>
+        <app-tweet-list #tweetlist></app-tweet-list>
+        <br/>
       </div>
 
       <div class="col-md-3">
-        <app-twitter-search></app-twitter-search>
+        <app-twitter-search (followtwitter)="tweetlist.refresh()"></app-twitter-search>
+        <br/>
       </div>
     </div>
     <br/>
